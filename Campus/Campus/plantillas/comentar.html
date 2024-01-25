@@ -1,0 +1,22 @@
+
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Comentar post</h2>
+    
+    <form method="post" action="{%url 'Comentar'%}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" disabled="disabled">Comentar</button>
+    </form>
+
+    {% for comentario in comentarios %}
+        <p>{{comentario.creador}}</p>
+        <p>{{ comentario.cuerpo }}</p>
+        <p>
+            
+            <a href="{% url 'EditarComentario' comentario.id %}">Editar</a>
+            <a href="{% url 'BorrarComentario' comentario.id %}">Borrar</a>
+        </p>
+    {% endfor %}
+{% endblock %}

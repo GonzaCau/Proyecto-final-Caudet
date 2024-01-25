@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<div style= "border: 2px solid #a0c0dbc1; border-radius: 10px; padding: 10px" class="container justify-content-center">
+    <form method="POST">{%csrf_token%}
+        <h3>Seguro que quiere borrar este estudiante? </h3><br>
+        <a href="{% url 'list' %}" class="btn btn-outline-primary btn-md">Volver</a>
+        <input type="submit" value="Enviar" class="btn btn-danger btn-md"/>
+        
+    </form>
+</div>
+
+
+{% endblock %}

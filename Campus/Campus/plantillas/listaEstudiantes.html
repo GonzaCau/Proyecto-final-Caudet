@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h1>Estudiantes</h1>
+<br><br>
+<h3>Crear nuevo estudiante? <a href="{% url 'Add' %}" class="btn btn-info btn-lg">Click aqui</a></h3>
+<br><br><br>
+<div class="container">
+    <div class="row">
+{% for estudiantes in object_list %}
+        <div style= "border: 2px solid #a0c0dbc1; border-radius: 10px; padding: 10px" class="col-sm-12 col-md-8 col-lg-6">
+        <p>Nombre: {{estudiantes.nom}}</p>
+        <p>
+            <a href="{% url 'Detail' estudiantes.id %}" class="btn btn-primary btn-sm">Ver</a>
+            <a href="{% url 'Edit' estudiantes.id %}" class="btn btn-primary btn-sm">Editar</a>
+            <a href="{% url 'Delete' estudiantes.id %}" class="btn btn-danger btn-sm">Borrar</a>
+        </p>
+        </div>
+    
+{% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+

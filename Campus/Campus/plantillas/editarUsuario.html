@@ -1,0 +1,19 @@
+
+
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Editar Perfil</h2>
+<br>
+<h2>Usuario = {{user}}</h2>
+<br><br>
+<div class="container"><div class="row"> 
+    <form action="{% url 'EditarPerfil'%}" method="post" class="justify-content-center col-8">
+        {% csrf_token %}
+        <table>
+            {{ formulario.as_table }}
+        </table>
+        <input type="submit" value="Enviar" class="btn btn-primary btn-md col-3">
+    </form>
+</div></div>
+{% endblock %}

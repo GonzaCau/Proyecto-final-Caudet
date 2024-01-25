@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h1>Registrar usuario</h1>
+<br>
+<div class="container justify">
+    <form action="{%url 'Registrar' %}" method="POST">
+        {%csrf_token%}
+        <table>{{form.as_table}}</table><br>
+        <input type="submit" value="Enviar" class="btn btn-primary btn-md">
+    </form>
+</div>
+{% endblock %}

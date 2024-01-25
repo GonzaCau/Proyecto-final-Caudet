@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<div class="media">
+    <img style="width: 40em; height:25em ;border-radius: 30%" src="/media/fotoconpips.jpg" alt="Foto-1">
+    <div class="media-body">
+        <h2 class="mt-0">Quien soy ?</h2> <br>
+        <h4>Mi nombre es Gonzalo Caudet </h4>
+        <h4>Vivo en Buenos Aires y aspiro a tener una carrera como programador. Además, soy un entusiasta de los videojuegos y estudiante de Coder House ! </h4>
+        <br>
+        <h4>Si desean contactarse con migo, aqui hay un par de links!</h4>
+        <br>
+        <a href="https://www.instagram.com/gonza_caudet/"><i class="bi-instagram fs-1"></i></a>
+        
+        <a href="https://www.linkedin.com/in/gonzalo-caudet-0b4004116/"><i class="bi-linkedin fs-1"></i></a>
+        
+        <a href="https://github.com/GonzaCau"><i class="bi-github fs-1"></i></a>
+        <br><br><br>
+        <a class="btn btn-primary m-1" href="{%url 'Home'%}">Volver</a>
+    </div>
+</div>
+{% endblock %}

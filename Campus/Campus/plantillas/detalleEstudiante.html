@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<div style= "border: 2px solid #a0c0dbc1; border-radius: 10px; padding: 10px" class="container justify-content-center">
+    <h2>Estudiante: {{estudiante.nom}}</h2><br>
+    <p>DNI: {{estudiante.dni}}</p><br>
+    <p>Email: {{estudiante.email}}</p><br>
+    <p>
+        <a href="{% url 'list' %}" class="btn btn-primary btn-md">Volver</a>
+    </p>
+</div>
+    
+
+
+{% endblock %}
